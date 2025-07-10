@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void _(const char *l, mpz_t v)
+void
+_(const char *l, mpz_t v)
 {
   gmp_printf("  %s:\n", l);
   gmp_printf("    dec: %Zd\n", v);
@@ -10,14 +11,15 @@ void _(const char *l, mpz_t v)
   gmp_printf("    oct: 0%Zo\n", v);
 }
 
-int main(int ac, char **av, char **ev)
+int
+main(int ac, char **av, char **ev)
 {
   (void)ev;
   if(ac != 2)
-  {
-    fprintf(stderr, "usage: %s <bytes>\n", av[0]);
-    return 1;
-  }
+    {
+      fprintf(stderr, "usage: %s <bytes>\n", av[0]);
+      return 1;
+    }
 
   int by = atoi(av[1]);
   if(by <= 0)
