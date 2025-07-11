@@ -5,10 +5,10 @@
 void
 _(const char *l, mpz_t v)
 {
-  gmp_printf("  %s:\n", l);
-  gmp_printf("    dec: %Zd\n", v);
-  gmp_printf("    hex: 0x%Zx\n", v);
-  gmp_printf("    oct: 0%Zo\n", v);
+  gmp_printf("  %s\n", l);
+  gmp_printf("    dec %Zd\n", v);
+  gmp_printf("    hex 0x%Zx\n", v);
+  gmp_printf("    oct 0%Zo\n", v);
 }
 
 int
