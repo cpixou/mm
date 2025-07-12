@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void
-_(const char *l, mpz_t v)
+void _(const char *l, mpz_t v)
 {
   gmp_printf("  %s\n", l);
   gmp_printf("    dec %Zd\n", v);
@@ -11,8 +10,7 @@ _(const char *l, mpz_t v)
   gmp_printf("    oct 0%Zo\n", v);
 }
 
-int
-main(int ac, char **av, char **ev)
+int main(int ac, char **av, char **ev)
 {
   (void)ev;
   if(ac != 2)
@@ -30,6 +28,7 @@ main(int ac, char **av, char **ev)
   mpz_inits(um, un, sm, sn, NULL);
 
   mpz_set_ui(un, 0);
+  
   mpz_ui_pow_ui(um, 2, bi);
   mpz_sub_ui(um, um, 1);
 
